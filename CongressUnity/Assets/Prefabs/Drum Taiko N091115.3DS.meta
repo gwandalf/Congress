@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 713b4046bb2c91a40931d16d15a8613a
+timeCreated: 1450446318
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Group01
+    100004: mod
+    100006: Object01
+    100008: Object02
+    100010: Object03
+    100012: Object04
+    100014: Object05
+    100016: Object06
+    100018: Object07
+    100020: Object08
+    100022: Object09
+    100024: Object10
+    100026: Object11
+    100028: Object12
+    100030: Object13
+    100032: Object14
+    100034: Object15
+    100036: Object16
+    100038: Object17
+    100040: Object18
+    100042: Object19
+    400000: //RootNode
+    400002: Group01
+    400004: mod
+    400006: Object01
+    400008: Object02
+    400010: Object03
+    400012: Object04
+    400014: Object05
+    400016: Object06
+    400018: Object07
+    400020: Object08
+    400022: Object09
+    400024: Object10
+    400026: Object11
+    400028: Object12
+    400030: Object13
+    400032: Object14
+    400034: Object15
+    400036: Object16
+    400038: Object17
+    400040: Object18
+    400042: Object19
+    2300000: mod
+    2300002: Object01
+    2300004: Object02
+    2300006: Object03
+    2300008: Object04
+    2300010: Object05
+    2300012: Object06
+    2300014: Object07
+    2300016: Object08
+    2300018: Object09
+    2300020: Object10
+    2300022: Object11
+    2300024: Object12
+    2300026: Object13
+    2300028: Object14
+    2300030: Object15
+    2300032: Object16
+    2300034: Object17
+    2300036: Object18
+    2300038: Object19
+    3300000: mod
+    3300002: Object01
+    3300004: Object02
+    3300006: Object03
+    3300008: Object04
+    3300010: Object05
+    3300012: Object06
+    3300014: Object07
+    3300016: Object08
+    3300018: Object09
+    3300020: Object10
+    3300022: Object11
+    3300024: Object12
+    3300026: Object13
+    3300028: Object14
+    3300030: Object15
+    3300032: Object16
+    3300034: Object17
+    3300036: Object18
+    3300038: Object19
+    4300000: mod
+    4300002: Object01
+    4300004: Object02
+    4300006: Object03
+    4300008: Object04
+    4300010: Object05
+    4300012: Object06
+    4300014: Object07
+    4300016: Object08
+    4300018: Object09
+    4300020: Object10
+    4300022: Object11
+    4300024: Object12
+    4300026: Object13
+    4300028: Object14
+    4300030: Object17
+    4300032: Object18
+    4300034: Object19
+    4300036: Object16
+    4300038: Object15
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
