@@ -1,2 +1,3 @@
 Séparer partie graphique et partie logicielle. Je me concentre sur la partie logicielle et fais le minimum côté graphique.
 Chercher compétences pour graphisme : COPIL, Région centre, section guidance, IRISA...
+progamme chronologique à faire défiler. Effet de mise en évidence des zones successives dans la vue : créer les fonctions sans les implémenter.
