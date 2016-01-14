@@ -13,6 +13,16 @@ public class PersonSetModel : MonoBehaviour {
     public int initialSize;
 
     /// <summary>
+    /// Initial period.
+    /// </summary>
+    public GameObject initialPeriod;
+
+    /// <summary>
+    /// Current period.
+    /// </summary>
+    private Period currentPeriod;
+
+    /// <summary>
     /// Person set.
     /// </summary>
     private List<GameObject> persons;
@@ -25,6 +35,7 @@ public class PersonSetModel : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         persons = new List<GameObject>();
+        currentPeriod = (Period)initialPeriod.GetComponent(typeof(Period));
         createPersons(initialSize);
 	}
 
@@ -40,17 +51,18 @@ public class PersonSetModel : MonoBehaviour {
             deletePersons(persons.Count - number);
         else return;
     }
-	
+
     /// <summary>
-    /// Creates a number of persons equal to the specified parameter.
+    /// Creates a number of persons equal to the specified integer.
     /// </summary>
     /// <param name="number">Number of persons to create.</param>
-	public void createPersons(int number)
+    public void createPersons(int number)
     {
         for (int i = 0; i < number; i++)
         {
-            float x = Random.value * 20 - 10;
-            float y = Random.value * 10 - 5;
+            Activity act = currentPeriod.GetRandomActivity();
+            float x = Random.Range(act.xMin, act.xMax);
+            float y = Random.Range(act.yMin, act.yMax);
             GameObject go = (GameObject)Instantiate(personPrefab, new Vector3(x, y, 0), Quaternion.identity);
             persons.Add(go);
         }
@@ -68,6 +80,22 @@ public class PersonSetModel : MonoBehaviour {
             GameObject go = persons[index];
             persons.Remove(go);
             Destroy(go);
+        }
+    }
+
+    /// <summary>
+    /// Moves all persons to other activities.
+    /// </summary>
+    /// <param name="period">Container of the new activities.</param>
+    public void Move(Period period)
+    {
+        currentPeriod = period;
+        foreach(GameObject p in persons)
+        {
+            Activity act = currentPeriod.GetRandomActivity();
+            float x = Random.Range(act.xMin, act.xMax);
+            float y = Random.Range(act.yMin, act.yMax);
+            p.transform.position = new Vector3(x, y, 0);
         }
     }
 

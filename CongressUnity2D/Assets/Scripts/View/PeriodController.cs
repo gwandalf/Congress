@@ -21,7 +21,7 @@ public class PeriodController : MonoBehaviour {
     /// </summary>
     void OnMouseDown()
     {
-        model.setActive(!model.active);
+        model.setActive(true);
     }
 
 }

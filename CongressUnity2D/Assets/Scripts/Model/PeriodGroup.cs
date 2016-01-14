@@ -13,14 +13,14 @@ public class PeriodGroup : MonoBehaviour {
 	public GameObject noonHolder;
 
 	// Periods of the day.
-	private Dictionary<string, Period> periods;
+	public Dictionary<string, Period> periods;
 
 	// Use this for initialization
 	void Start () {
-        this.periods = new Dictionary<string, Period>();
-		this.periods["morning"] = (Period)this.morningHolder.GetComponent (typeof(Period));
-		this.periods["afternoon"] = (Period)this.afternoonHolder.GetComponent (typeof(Period));
-		this.periods["noon"] = (Period)this.noonHolder.GetComponent (typeof(Period));
+        periods = new Dictionary<string, Period>();
+		periods["morning"] = (Period)morningHolder.GetComponent (typeof(Period));
+		periods["afternoon"] = (Period)afternoonHolder.GetComponent (typeof(Period));
+		periods["noon"] = (Period)noonHolder.GetComponent (typeof(Period));
 	}
 
     /// <summary>
@@ -29,7 +29,8 @@ public class PeriodGroup : MonoBehaviour {
     /// <param name="exception">Period to not deactivate.</param>
     public void deactivateAllButOne(Period exception)
     {
-        foreach(Period p in this.periods.Values)
+        
+        foreach(Period p in periods.Values)
         {
             if (exception != p)
                 p.setActive(false);

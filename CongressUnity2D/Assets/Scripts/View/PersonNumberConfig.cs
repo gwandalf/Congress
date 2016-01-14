@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 /// <summary>
 /// Manages the person number UI.
@@ -12,7 +13,10 @@ public class PersonNumberConfig : MonoBehaviour {
     /// </summary>
     public GameObject personSetHolder;
 
-    public GameObject field;
+    /// <summary>
+    /// Input Field.
+    /// </summary>
+    public InputField field;
 
     /// <summary>
     /// The observed PersonSetModel.
@@ -29,7 +33,9 @@ public class PersonNumberConfig : MonoBehaviour {
     /// </summary>
 	public void OnClick()
     {
-        observed.resize(2);
+        string input = field.text;
+        int value = Int32.Parse(input);
+        observed.resize(value);
     }
 
 }
