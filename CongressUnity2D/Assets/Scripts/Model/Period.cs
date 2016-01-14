@@ -8,11 +8,6 @@ using System.Collections.Generic;
 public class Period : MonoBehaviour {
 
     /// <summary>
-    /// GameObject holding the activities.
-    /// </summary>
-    public GameObject activitiesHolder;
-
-    /// <summary>
     /// Activities held during this period.
     /// </summary>
     private List<Activity> activities;
@@ -23,14 +18,20 @@ public class Period : MonoBehaviour {
 	/// <value><c>true</c> if active; otherwise, <c>false</c>.</value>
 	public bool active
 	{
-		get { return activitiesHolder.activeSelf; }
-		private set { activitiesHolder.SetActive(value); }
+		get
+        {
+            return periodHolder.activeSelf;
+        }
+		private set
+        {
+           periodHolder.SetActive(value);
+        }
 	}
 
 	/// <summary>
-	/// The GameObjetc holding the period group.
+	/// The GameObject holding the period.
 	/// </summary>
-	public GameObject groupHolder;
+	public GameObject periodHolder;
 
 	/// <summary>
 	/// The period group.
@@ -39,7 +40,7 @@ public class Period : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		group = (PeriodGroup) groupHolder.GetComponent (typeof(PeriodGroup));
+		group = (PeriodGroup) gameObject.transform.parent.gameObject.GetComponent (typeof(PeriodGroup));
         activities = new List<Activity>();
         addActivities();
     }
@@ -74,7 +75,8 @@ public class Period : MonoBehaviour {
     /// </summary>
     void addActivities()
     {
-        foreach (Component cmp in activitiesHolder.GetComponentsInChildren(typeof(Activity)))
+        foreach (Component cmp in periodHolder.GetComponentsInChildren(typeof(Activity)))
             activities.Add((Activity)cmp);
     }
+
 }

@@ -9,8 +9,10 @@ public class PeriodGroup : MonoBehaviour {
 
 	// Holders.
 	public GameObject morningHolder;
-	public GameObject afternoonHolder;
-	public GameObject noonHolder;
+    public GameObject noonHolder;
+    public GameObject afternoonHolder;
+    public GameObject eveningHolder;
+    public GameObject nightHolder;
 
 	// Periods of the day.
 	public Dictionary<string, Period> periods;
@@ -21,7 +23,9 @@ public class PeriodGroup : MonoBehaviour {
 		periods["morning"] = (Period)morningHolder.GetComponent (typeof(Period));
 		periods["afternoon"] = (Period)afternoonHolder.GetComponent (typeof(Period));
 		periods["noon"] = (Period)noonHolder.GetComponent (typeof(Period));
-	}
+        periods["evening"] = (Period)eveningHolder.GetComponent(typeof(Period));
+        periods["night"] = (Period)nightHolder.GetComponent(typeof(Period));
+    }
 
     /// <summary>
     /// Deactivates all the periods, except the specified one.
