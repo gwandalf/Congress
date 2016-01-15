@@ -63,7 +63,7 @@ public class PersonSetModel : MonoBehaviour {
             Activity act = currentPeriod.GetRandomActivity();
             float x = Random.Range(act.xMin, act.xMax);
             float y = Random.Range(act.yMin, act.yMax);
-            GameObject go = (GameObject)Instantiate(personPrefab, new Vector3(x, y, 0), Quaternion.identity);
+            GameObject go = (GameObject)Instantiate(personPrefab, new Vector3(x, y, 0), Quaternion.Euler(90, 0, 0));
             persons.Add(go);
         }
     }
